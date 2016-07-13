@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+textarea {
+	/**去掉IOS输入框的内阴影**/
+	-webkit-appearance:none;
+}
+a {
+	text-decoration: none;
+	/**去掉移动端点击时候留下的半透明背景和边框**/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	outline: 0;
+}
+body{
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color:#FFF;
+	font:12px/1.8 tahoma,"microsoft yahei","微软雅黑";
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+img {
+	vertical-align: middle;
+	/*解决IE图片放大失真*/
+	-ms-interpolation-mode: bicubic;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym {
+	border:0;
+}
+/**清除浮动**/
+.clearfix:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix{
+	*zoom:1;
+}
+/***
+  *删除元素display:inline-block;之间的空白
+  *参考资料 http://ued.taobao.com/blog/2012/08/inline-block/
+  */
+.dib-wrap {
+	font-size:0;/* 所有浏览器 */
+	*word-spacing:-1px;/* IE6、7 */
+}
+.dib-wrap .dib{
+	font-size: 12px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align:top;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	/* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */
+	.dib-wrap{
+		letter-spacing:-5px;/* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节*/
+	}
+}
+.dib {
+	display: inline-block;
+	*display:inline;
+	*zoom:1;
+}
+
+/* 删除input:number上下箭头 */
+/* 将type="number"改为type="tel"，同样是数字键盘，但是没有箭头。 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}

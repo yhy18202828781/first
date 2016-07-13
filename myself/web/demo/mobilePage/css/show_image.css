@@ -1,0 +1,5 @@
+.fullbg {
+    position: fixed; z-index: 2; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: #000;opacity: 1;
+}
+.fullimg { z-index: 3; position: fixed; display: block; }

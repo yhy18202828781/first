@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: "微软雅黑";background-color: #040404;
+}
+.body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.loginBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.loginBg img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+body .header{
+    height: 44px;
+    line-height: 44px;
+    font-size: 19px;
+    text-align: center;
+    color: #fff;background-color: #040404;
+    z-index: 99;
+}
+.m_logo {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    padding-top: 58px;
+}
+.m_logo img {
+    height: 100%;
+}
+.content {
+    padding-top: 78px;
+    width: 82.8125%;
+    margin: auto;
+    max-width: 350px;
+    z-index: 999;
+}
+.input_mod{
+    padding: 0 10px 5px 25px;
+    height: 18px;
+    border-bottom: 1px #a1a1a1 solid;
+    position: relative;
+}
+.name_icon
+{
+    position: absolute;
+    left: 0;
+    width: 12px;top: -3px
+}
+.name_icon img,.pwd_icon img{
+    width: 100%;
+}
+.pwd_icon{
+    position: absolute;
+    left: 0;
+    width: 13px;top: -1px
+}
+.input_m
+{
+    width: 100%;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    outline: 0;
+    background: none;
+    text-indent: 20%;
+    z-index: 999;
+    position: relative;
+}
+.input_mod.mgt26{
+    margin-top: 26px;
+}
+.m_reMod{
+    margin-top: 7px;
+    height: 15px;z-index: 99;
+}
+.m_reMod .check
+{
+    font-size: 12px;
+    line-height: 12px;
+    background: url("../images/mobile/check.png") no-repeat 0 2px;
+    height: 12px;
+    padding-left: 20px;
+    color: #fff;
+}
+.m_reMod .check.on{
+    background: url("../images/mobile/check_on.png") no-repeat 0 2px;
+}
+.login_btn
+{
+    width: 100%;
+    margin-top: 50px;
+}
+.login_btn a{
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    background-color: #ff2e2e;
+    border-radius: 5px;
+}
+.body .line_box {
+    height: 152px;
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 46px;
+    z-index: 2;
+}
+.body .line_box .line {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.body .line_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 8px;
+}
+.copyright a {
+    color: #fff;
+}
+
+.title15{
+    font-size: 15px;
+    color: #fff;
+    padding-top: 10px;
+}
+.put_mod{
+    width: 100%;
+    border: 3px #999 solid;
+    padding: 6px 0;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.put_mod input{
+    padding: 0px 4%;
+    color: #fff;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+    width: 92%;
+    background: none;
+}
+.text_info
+{
+    font-size: 15px;
+    margin-top: 22px;
+    text-align: center;
+    color: #fff;
+}
+.text_info span{
+    color: #ff2e2e;
+}
+
+.popMod
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.pop_boxShowdow
+{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter:alpha(opacity=40);
+    position: absolute;
+    left: 0;
+    top: 0;z-index: 9999;
+}
+.div_mod
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 270px;
+    margin-left: -135px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-top: -28px;z-index: 9999;
+}
+.info_img{
+    text-align: center;
+}
+.info_img img{
+    width: 30px;
+    margin-bottom: 10px;
+}
+.info_text
+{
+    font-size: 14px;
+    text-align: center;
+    color: #1a1a1a;
+}

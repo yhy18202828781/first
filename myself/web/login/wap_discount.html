@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/m_login.css" rel="stylesheet">
+    <title>优惠券使用</title>
+</head>
+<body>
+<div class="loginBg"><img src="images/mobile/bg_login.png"></div>
+<div class="body">
+    <div class="header">优惠券使用</div>
+    <div class="content" style="width: 90%">
+        <div class="title15">优惠券验证：</div>
+        <div class="put_mod">
+            <input type="text" value="3013133412449925">
+        </div>
+        <div class="text_info">价值<span>50元</span>门票</div>
+        <div class="login_btn"  style="width: 94%;margin: 100px auto 0"><a href="javascript:void(0);">使用</a></div>
+    </div>
+    <!--<div class="copyright">-->
+        <!--<p>©2015-2016  vtings.com , all right reserved</p>-->
+    <!--</div>-->
+</div>
+<!--<div class="popMod">-->
+    <!--<div class="pop_boxShowdow"></div>-->
+    <!--<div class="div_mod">-->
+        <!--<div class="info_img"><img src="./images/mobile/ok_icon.png"></div>-->
+        <!--<div class="info_text">优惠券使用成功</div>-->
+    <!--</div>-->
+<!--</div>-->
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    // 显示信息
+    var src = "./images/mobile/ok_icon.png";
+    showInfo ('优惠券使用成功',src);
+    function showInfo (content,src) {
+        if($("#alertInfo").length>0) {
+            $("#alertInfo").remove();
+        }
+        var $error = $('+<div class="popMod" id="">'+
+        '<div class="pop_boxShowdow"></div>'+
+        '<div class="div_mod">'+
+        '<div class="info_img"><img src="'+src+'"></div>'+
+        '<div class="info_text">'+ (content || '优惠券使用成功') +'</div>'+
+        '</div>'+
+        '</div>').appendTo("body");
+        setTimeout(function(){
+            $error.fadeOut('400', function() {
+                $(this).remove();
+            });
+        }, 2000);
+    }
+</script>
+</body>
+</html>

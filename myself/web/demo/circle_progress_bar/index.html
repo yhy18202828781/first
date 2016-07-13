@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			font-family: "微软雅黑";
+		}
+		.circle {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			border-radius: 50%;
+			background: #b2d0ee;
+		}
+		.pie_left, .pie_right {
+			width:40px; 
+			height:40px;
+			position: absolute;
+			top: 0;left: 0;
+		}
+		.left, .right {
+			width:40px; 
+			height:40px;
+			background:#ddd;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.pie_right, .right {
+			clip:rect(0,auto,auto,20px);
+		}
+		.pie_left, .left {
+			clip:rect(0,20px,auto,0);
+		}
+		.mask {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			left: 5px;
+			top: 5px;
+			background: #FFF;
+			position: absolute;
+			text-align: center;
+			line-height: 30px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #00aacc;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle" style="left:0">
+			<div class="pie_left"><div class="left"></div></div>
+			<div class="pie_right"><div class="right"></div></div>
+			<div class="mask"><span>80</span>%</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.circle').each(function(index, el) {
+			var num = $(this).find('span').text() * 3.6;
+			if (num<=180) {
+				$(this).find('.right').css('transform', "rotate(" + num + "deg)");
+			} else {
+				$(this).find('.right').css('transform', "rotate(180deg)");
+				$(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+			};
+		});
+
+	});
+</script>
